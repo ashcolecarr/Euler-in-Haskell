@@ -1,0 +1,16 @@
+-- Project Euler Problem 29
+
+import Data.Time (getCurrentTime, diffUTCTime)
+
+main = do
+  start <- getCurrentTime
+  putStr $ "The number of distinct terms in the sequence generated from a ^ b where 2 <= a <= " ++ show maxNumber ++ "and 2 <= b <= " ++ show maxNumber ++ " is "
+  putStrLn $ show (length $ nub sequence) ++ "."
+  stop <- getCurrentTime
+  putStrLn $ "Program execution took " ++ show (diffUTCTime stop start) ++ " seconds."
+
+maxNumber :: Int
+maxNumber = 100
+
+powerSequence :: [Int]
+powerSequence = [a ^ b | a <- [2..maxNumber], b <- [2..maxNumber]]
