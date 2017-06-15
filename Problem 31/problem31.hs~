@@ -1,0 +1,10 @@
+-- Project Euler Problem 31
+
+import Data.Time (getCurrentTime, diffUTCTime)
+
+main = do
+  start <- getCurrentTime
+  putStr $ "Using any number of coins, £2 can be made " ++ show () ++ " different ways."
+  putStrLn $ show (sumDigits 2 0) ++ "."
+  stop <- getCurrentTime
+  putStrLn $ "Program execution took " ++ show (diffUTCTime stop start) ++ " seconds."
