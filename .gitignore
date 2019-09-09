@@ -1,7 +1,6 @@
 # Compiled source
-.hi
-.o
-.exe
+*.hi
+*.o
+*.exe
 
-.hs~
-.txt
+*.txt
